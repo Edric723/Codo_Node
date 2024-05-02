@@ -1,13 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tu One Page</title>
     <link rel="stylesheet" href="styles.css">
-    <title>Proyecto Node</title>
 </head>
 <body>
-    <h1>HOLA MUNDO</h1>
-    <h2>Probando vinculación de Git</h2>
+    <header>
+        <div class="logo">Logo</div>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#contenido">Contenido</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="inicio" class="seccion">
+        <h1>Inicio</h1>
+        <!-- Contenido de la sección de inicio -->
+    </div>
+
+    <div id="contenido" class="seccion">
+        <h1>Contenido</h1>
+        <!-- Contenido de la sección de contenido -->
+    </div>
+
+    <div id="nosotros" class="seccion">
+        <h1>Nosotros</h1>
+        <!-- Contenido de la sección de nosotros -->
+    </div>
+
+    <div id="contacto" class="seccion">
+        <h1>Contacto</h1>
+        <!-- Contenido de la sección de contacto -->
+    </div>
+
+    <footer>
+        <p>Derechos de autor © 2022 Tu Empresa</p>
+    </footer>
+
+    <button onclick="irArriba()">Ir arriba</button>
+
+    <script src="script.js"></script>
 </body>
 </html>
