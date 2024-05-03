@@ -1,23 +1,23 @@
-// Función para ir arriba
-function irArriba() {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-}
 
-// Agregar evento click al botón "Ir arriba" del footer
-document.querySelector('footer button').addEventListener('click', irArriba);
+// Carga todo el contenido de la página, botón incluido pero automáticamente luego...
+document.addEventListener("DOMContentLoaded", function() {
+    
+    
+    // ... Oculta el botón de "Ir arriba" al cargar la página
+    document.getElementById("boton-arriba").style.display = "none";
 
-// Obtener todas las secciones excepto la primera
-const secciones = document.querySelectorAll('.seccion:not(:first-child)');
+    // Mostrar u ocultar el botón de "Ir arriba" al hacer scroll
+    window.addEventListener("scroll", function() {
+        var botonArriba = document.getElementById("boton-arriba");
+        var seccionInicio = document.getElementById("inicio");
+        var scrollY = window.scrollY || window.pageYOffset;
 
-// Mostrar el botón "Ir arriba" cuando se desplaza más allá de la primera sección
-window.addEventListener('scroll', () => {
-    const scrollPosition = window.scrollY;
-    const primeraSeccion = document.querySelector('.seccion:first-child');
-    const alturaPrimeraSeccion = primeraSeccion.offsetHeight;
-
-    if (scrollPosition > alturaPrimeraSeccion) {
-        document.querySelector('footer button').style.display = 'block';
-    } else {
-        document.querySelector('footer button').style.display = 'none';
-    }
+        // Si el scroll está más abajo de la sección de inicio, mostrar el botón
+        if (scrollY > seccionInicio.offsetHeight) {
+            botonArriba.style.display = "block";
+        } else {
+            botonArriba.style.display = "none";
+        }
+    });
 });
+
