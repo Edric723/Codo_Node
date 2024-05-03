@@ -65,21 +65,18 @@ footer {
     background-color: #d1d1d1;
 }
 
-button.ir-arriba {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    outline: none;
-   
-    width: 10vw; /* Ancho del botón en un 10% del viewport width */
-    height: 10vh; /* Altura del botón en un 10% del viewport height */
-}
 
-button.ir-arriba:hover {
-    background-color: #0056b3;
+#boton-arriba {
+    position: sticky;
+    width: 50px;
+    height: 50px;
+    top: 90%;
+    left: 90%;
+    background-color: #00B2FF;
+    border-radius: 30%;
+    text-align: center;
+    padding: 0.5em;
+    z-index: 999;
+    
+
 }
